@@ -9,11 +9,15 @@ public class ShootToLeft extends Command {
     double TIME_TO_WAIT_IN_SECONDS = 0.5;
 
     public ShootToLeft() {
+        super("ShootToLeft");
         requires(Robot.shooter);
+        requires(Robot.holder);
     }
 
     @Override
     protected void initialize() {
+        Robot.holder.retractHoldLeft();
+        Robot.holder.retractHoldRight();
         Robot.shooter.extendShootLeft();
         timer = new Timer();
         timer.start();
@@ -28,5 +32,8 @@ public class ShootToLeft extends Command {
     @Override
     protected void end() {
         Robot.shooter.retractShootLeft();
+
+        Robot.holder.extendHoldRight();
+        Robot.holder.extendHoldLeft();
     }
 }

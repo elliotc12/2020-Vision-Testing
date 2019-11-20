@@ -9,11 +9,16 @@ public class ShootToRight extends Command {
     double TIME_TO_WAIT_IN_SECONDS = 0.5;
 
     public ShootToRight() {
+
+        super("ShootToRight");
         requires(Robot.shooter);
+        requires(Robot.holder);
     }
 
     @Override
     protected void initialize() {
+        Robot.holder.retractHoldLeft();
+        Robot.holder.retractHoldRight();
         Robot.shooter.extendShootRight();
         timer = new Timer();
         timer.start();
@@ -27,6 +32,8 @@ public class ShootToRight extends Command {
     //TODO: See if its retracted when another command requires the system, or if you need to use interrupted()
     @Override
     protected void end() {
+        Robot.holder.extendHoldRight();
+        Robot.holder.extendHoldLeft();
         Robot.shooter.retractShootRight();
     }
 }

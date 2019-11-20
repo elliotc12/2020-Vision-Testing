@@ -5,6 +5,7 @@ import frc.robot.Robot;
 
 public class DriveCurvature extends Command {
     public DriveCurvature() {
+        super("DriveCurvature");
         requires(Robot.drive);
     }
 
