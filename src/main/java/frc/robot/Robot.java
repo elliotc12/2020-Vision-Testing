@@ -24,7 +24,6 @@ public class Robot extends TimedRobot {
         Scheduler.getInstance().run();
     }
 
-
     @Override
     public void autonomousInit() {
         //Example of setting auto: Scheduler.getInstance().add(YOUR AUTO);
