@@ -10,7 +10,7 @@ public class Robot extends TimedRobot {
      * Ex: public static System system = new System();
      */
 
-    public static DriveTrainSubsystem drivetrain_subsystem = new DriveTrainSubsystem()
+    public static DriveTrainSubsystem drivetrain_subsystem = new DriveTrainSubsystem();
 
     public static OI oi = new OI();
 

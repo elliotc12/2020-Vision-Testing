@@ -33,7 +33,7 @@ public class DriveTrain extends SubsystemBase {
     }
 
     public void drive(double forward, double rotation) {
-	drive.curvatureDrive(forward, rotation, true)
+	drive.curvatureDrive(forward, rotation, true);
     }
 
     @Override

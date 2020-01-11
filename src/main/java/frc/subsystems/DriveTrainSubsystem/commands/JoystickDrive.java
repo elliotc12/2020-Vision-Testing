@@ -1,10 +1,10 @@
-package frc.subsystems.drivetrain.commands;
+package frc.subsystems.DriveTrainSubsystem.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 import frc.subsystems.DriveTrainSubsystem;
 
-public class DefaultDrive extends CommandBase {
+public class JoystickDrive extends CommandBase {
     private final DriveTrainSubsystem drive_subsystem;
 
     public JoystickDrive(DriveTrainSubsystem subsystem) {
